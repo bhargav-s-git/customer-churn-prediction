@@ -1,31 +1,31 @@
-# Customer Churn Prediction
-
 # 📉 Customer Churn Prediction
 
-Predicting whether a customer will churn using machine learning, with a focus on business impact and model explainability.
+Predicting whether a customer will churn using machine learning, with a focus on business impact and model explainability using SHAP.
 
 ---
 
 ## 🚀 Project Overview
 
-Customer churn has a significant impact on revenue. This project aims to develop a predictive model to identify high-risk customers before they leave, enabling proactive retention strategies.
+Customer churn is a major challenge for subscription-based businesses, directly impacting profitability. This project builds a supervised learning model to predict churn based on customer demographics, service usage, and payment behavior.
 
 ---
 
 ## 📊 Problem Statement
 
-**Goal**: Classify whether a customer will churn based on behavioral and demographic attributes.
+**Objective**: Predict whether a customer will churn (Yes/No) using behavioral and account-related features.
 
-**Business Value**: Improve customer retention through targeted interventions, reducing churn-related losses.
+**Business Impact**: Enables proactive retention strategies like targeted offers, personalized communication, and customer success interventions.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Python**, **pandas**, **scikit-learn**, **matplotlib**, **seaborn**
-- Jupyter notebooks for development and storytelling
-- Feature engineering, model selection, evaluation metrics
-- Placeholder for deployment: `Flask` or `FastAPI` (to be added)
+- **Languages & Libraries**: Python, pandas, scikit-learn, matplotlib, seaborn, SHAP
+- **Modeling**: Logistic Regression, Random Forest, SVM
+- **Evaluation**: ROC-AUC, Precision, Recall, F1 Score
+- **Explainability**: SHAP (SHapley Additive Explanations)
+- **Notebooks**: Jupyter (EDA, modeling, SHAP)
+- *(Deployment via Flask/Streamlit optional in future)*
 
 ---
 
@@ -39,77 +39,71 @@ customer-churn-prediction/
 ├── requirements.txt ← Python dependencies
 └── README.md ← You're here
 
----
-
-## 📈 Features Used
-
-- Customer demographics (gender, senior citizen, tenure)
-- Service usage patterns (internet, phone, contract type)
-- Billing and payment details (monthly charges, payment method)
 
 ---
 
-## 🧠 Model Pipeline (Coming Soon)
+## 🔍 Exploratory Data Analysis (EDA)
 
-- Data Preprocessing
-- Feature Engineering
-- Model Training: Logistic Regression, Random Forest, XGBoost
-- Evaluation: ROC-AUC, Precision, Recall
-- SHAP/Feature Importance (Explainability)
+- Customers on **month-to-month contracts** are more likely to churn.
+- **High monthly charges** correlate with higher churn.
+- **Electronic check payment method** is associated with increased churn.
+- **Long-tenured customers** are more likely to stay.
+
+Plots created using seaborn and matplotlib can be found in the EDA notebook.
+
+---
+
+## 🧠 Model Development
+
+We trained three classification models:
+- Logistic Regression
+- Random Forest Classifier
+- Support Vector Machine
+
+### 📈 Performance Summary (Test Set)
+
+| Model               | Accuracy | Precision | Recall | F1 Score | ROC AUC |
+|---------------------|----------|-----------|--------|----------|---------|
+| Logistic Regression | 0.786    | 0.623     | 0.495  | 0.551    | **0.831** |
+| Random Forest       | 0.792    | 0.649     | 0.479  | 0.551    | 0.816    |
+| SVM                 | **0.795**| **0.665** | 0.457  | 0.542    | 0.784    |
+
+✅ **Logistic Regression was selected as the final model** due to its higher ROC AUC and interpretability.
 
 ---
 
 ## 🔍 Model Explainability (SHAP)
 
-To make model predictions interpretable, we used **SHAP (SHapley Additive Explanations)**:
+To improve transparency, we used SHAP (SHapley Additive Explanations) to explain model predictions:
 
-- **Top Churn Drivers** (from SHAP summary plot):
+- **Top Churn Drivers**:
   - Contract type (month-to-month)
-  - Tenure (shorter customers more likely to churn)
+  - Short customer tenure
   - High monthly charges
 
 <p align="center">
   <img src="outputs/figures/shap_summary_plot.png" width="600" alt="SHAP Summary">
 </p>
 
-We also used SHAP **force plots** to explain individual predictions:  
-🔗 [View Sample Force Plot (HTML)](outputs/figures/shap_force_plot.html)
-
-These insights help translate model predictions into actionable business strategy.
-
----
-
-## 📌 Key Insights (To Be Added)
-
-- High churn among customers with month-to-month contracts
-- Electronic check payment method associated with higher churn
-- Long-tenured customers less likely to churn
-
----
-
-## 🚧 TODOs
-
-- [ ] Add preprocessing script in `src/`
-- [ ] Implement ML pipeline and evaluation
-- [ ] Include SHAP-based model explainability
-- [ ] Deploy via API or Streamlit (optional)
+🔗 [View Interactive Force Plot (HTML)](outputs/figures/shap_force_plot.html)  
+This explains why an individual customer is predicted to churn.
 
 ---
 
 ## 📎 Dataset
 
-- [Telco Customer Churn Dataset (Kaggle)](https://www.kaggle.com/blastchar/telco-customer-churn)
+- [Telco Customer Churn Dataset – Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 ---
 
 ## 👤 Author
 
-Bhargav Somepalli  
+**Bhargav Somepalli**  
 [GitHub](https://github.com/bhargav-s-git) | [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN/)  
-*Open to collaborations and freelance work in data science & analytics.*
+*Open to data science collaborations, freelancing, and full-time roles.*
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
