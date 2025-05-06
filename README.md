@@ -90,6 +90,20 @@ This explains why an individual customer is predicted to churn.
 
 ---
 
+## 🔮 Future Development
+
+This project can be expanded in the following ways:
+
+- **Hyperparameter Tuning**: Use GridSearchCV or RandomizedSearchCV to optimize model performance.
+- **Advanced Models**: Test ensemble methods like XGBoost or Gradient Boosting Machines.
+- **Class Imbalance Handling**: Use SMOTE or weighted loss functions to improve recall.
+- **Automated Pipeline**: Refactor notebooks into a full pipeline using `train_model.py`, `evaluate_model.py`, etc.
+- **Deployment**: Build a web app using **Streamlit** or deploy an API using **FastAPI** to serve predictions.
+- **Monitoring & Retraining**: Add model drift monitoring and automate periodic retraining on new data.
+- **Dashboard Integration**: Build an interactive dashboard with **Power BI** or **Plotly Dash** for business stakeholders.
+
+---
+
 ## 📎 Dataset
 
 - [Telco Customer Churn Dataset – Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
