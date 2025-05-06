@@ -59,6 +59,26 @@ customer-churn-prediction/
 
 ---
 
+## 🔍 Model Explainability (SHAP)
+
+To make model predictions interpretable, we used **SHAP (SHapley Additive Explanations)**:
+
+- **Top Churn Drivers** (from SHAP summary plot):
+  - Contract type (month-to-month)
+  - Tenure (shorter customers more likely to churn)
+  - High monthly charges
+
+<p align="center">
+  <img src="outputs/figures/shap_summary_plot.png" width="600" alt="SHAP Summary">
+</p>
+
+We also used SHAP **force plots** to explain individual predictions:  
+🔗 [View Sample Force Plot (HTML)](outputs/figures/shap_force_plot.html)
+
+These insights help translate model predictions into actionable business strategy.
+
+---
+
 ## 📌 Key Insights (To Be Added)
 
 - High churn among customers with month-to-month contracts
