@@ -150,7 +150,7 @@ This project can be expanded in the following ways:
 ## 👤 Author
 
 **Bhargav Somepalli**  
-[GitHub](https://github.com/bhargav-s-git) | [LinkedIn](https://www.linkedin.com/in/YOUR-LINKEDIN/)  
+[GitHub](https://github.com/bhargav-s-git) | [LinkedIn](https://www.linkedin.com/in/bhargav-somepalli-2355b7276/)  
 *Open to data science collaborations, freelancing, and full-time roles.*
 
 ---
