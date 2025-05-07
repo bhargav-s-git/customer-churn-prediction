@@ -10,6 +10,14 @@ Customer churn is a major challenge for subscription-based businesses, directly 
 
 ---
 
+## 📚 Project Notebooks
+
+- 🔍 [01_eda_customer_churn.ipynb](notebooks/01_eda_customer_churn.ipynb): Exploratory Data Analysis
+- 🧠 [02_model_training.ipynb](notebooks/02_model_training.ipynb): Model Training & Evaluation
+- 🔎 [03_model_explainability.ipynb](notebooks/03_model_explainability.ipynb): SHAP-based Model Interpretation
+
+---
+
 ## 📊 Problem Statement
 
 **Objective**: Predict whether a customer will churn (Yes/No) using behavioral and account-related features.
@@ -68,7 +76,36 @@ We trained three classification models:
 | Random Forest       | 0.792    | 0.649     | 0.479  | 0.551    | 0.816    |
 | SVM                 | **0.795**| **0.665** | 0.457  | 0.542    | 0.784    |
 
+| 📊 Metric       | Logistic Regression |
+|----------------|----------------------|
+| 🧪 Accuracy     | 78.6%               |
+| 🎯 Precision    | 62.3%               |
+| 📉 Recall       | 49.5%               |
+| ⚖️ F1 Score     | 55.1%               |
+| 📈 ROC AUC      | 83.1%               |
+
 ✅ **Logistic Regression was selected as the final model** due to its higher ROC AUC and interpretability.
+
+---
+
+## 🧪 Sample Prediction
+
+Here’s a sample churn prediction scenario:
+
+> **Customer Profile**
+> - Tenure: 2 months  
+> - Contract Type: Month-to-month  
+> - Monthly Charges: $80  
+> - Internet Service: Fiber optic  
+> - Payment Method: Electronic check
+
+**🔍 Prediction Result**:  
+**Churn = Yes** (74% probability)
+
+**Key Reasons (via SHAP)**:
+- Contract is month-to-month (major churn driver)
+- High monthly charges
+- Short tenure
 
 ---
 
